@@ -38,13 +38,13 @@ function joinController() {
    };
    
    //회원가입시 아이디 중복체크
-   this.requestIdCheck = function(id) {
+  /* this.requestIdCheck = function(id) {
             
       var result = dao.idCheckDao(id);
       
       return result;      
       
-   };
+   };*/
    
    //회원가입시 닉네임 중복체크
    this.requestNicknameCheck = function(nickname) {

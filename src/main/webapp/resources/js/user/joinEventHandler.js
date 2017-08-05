@@ -8,16 +8,16 @@ $(document).ready(function() {
    var name = ["아이디", "닉네임", "이메일"];
    var divName = ["Id", "Nickname", "Email"];
    
-    $('.onlyAlphabetOrNumber').keyup(function(event){ //키보드를 누르고 뗄때 아이디입력창에서 일어나는 이벤트
+   /* $('.onlyAlphabetOrNumber').keyup(function(event){ //키보드를 누르고 뗄때 아이디입력창에서 일어나는 이벤트
        
-        if (!(event.keyCode >=37 && event.keyCode<=40)) {
+        if (!(event.keyCode >= 37 && event.keyCode<= 40)) {
            
             var inputVal = $(this).val();
             $(this).val($(this).val().replace(/[^A-Za-z0-9+]{1,}$/gi,'')); //아이디 4자리 이상 16자리 이하, 영문과 숫자만 가능
             
         }
         
-    });
+    });*/
 
    $(".onlyHangul").keyup(function(event) { //키보드를 누르고 뗄때 이름입력창에서 일어나는 이벤트
       
@@ -42,7 +42,14 @@ $(document).ready(function() {
    });
 
    //------- 검사하여 상태를 class에 적용
-   $('#id').keyup(function(event) { //인풋창 빨강, 초록창으로 변하는 이벤트
+   
+   /* 수정일 2017.08.03
+    * 
+    * ID -> email
+    * ID input 상자 삭제
+    *  
+    *  */
+  /* $('#id').keyup(function(event) { //인풋창 빨강, 초록창으로 변하는 이벤트
 
       var divId = $('#divId');
 
@@ -61,7 +68,7 @@ $(document).ready(function() {
          
       }
       
-   });
+   });*/
 
    $('#password').keyup(function(event) { //인풋창 빨강, 초록창으로 변하는 이벤트
 
@@ -177,13 +184,17 @@ $(document).ready(function() {
       message = $('#idcheck'); //아이디 중복체크 유무
       var nicknamecheck = $('#nicknamecheck'); //닉네임 중복체크 유무
       var emailcheck = $('#emailcheck'); //이메일 중복체크 유무
-      var re_id = /^[A-Za-z0-9+]{6,16}$/; //아이디 검사식
+      
+      /*var re_id = /^[A-Za-z0-9+]{6,16}$/; */ //아이디 검사식
+    
       var re_pw = /^(?=.*[a-zA-Z])((?=.*\d)|(?=.*\W)).{6,16}$/; //비밀번호 검사식
       var re_mail = /^([\w\.-]+)@([a-z\d\.-]+)\.([a-z\.]{2,6})$/; //이메일 검사식
 
       var provision = $('#provision');
       var memberInfo = $('#memberInfo');
-      var divId = $('#divId');
+      
+     /* var divId = $('#divId');*/
+      
       var divPassword = $('#divPassword');
       var divPasswordCheck = $('#divPasswordCheck');
       var divName = $('#divName');
@@ -228,7 +239,14 @@ $(document).ready(function() {
       }
 
       //아이디 검사
-      if ($('#id').val() == "") {
+      
+      /* 수정일 2017.08.03
+       * 
+       * 
+       * 
+       */
+      
+     /* if ($('#id').val() == "") {
          
          message[0] = "c-font-red glyphicon glyphicon-info-sign";
          message[1] = "아이디를 입력하여 주시기 바랍니다.";
@@ -263,7 +281,7 @@ $(document).ready(function() {
          divId.removeClass("has-error");
          divId.addClass("has-success");
          
-      }
+      }*/
 
       //패스워드 검사
       if ($('#password').val() == "") {
@@ -411,10 +429,10 @@ $(document).ready(function() {
          
       }
       
-      if (idCheck == 1 && emailCheck == 1 && nicknameCheck == 1) {
+      if (emailCheck == 1 && nicknameCheck == 1) {
          //모든 입력 검사 끝나면 회원정보 받음
          var user = { 
-               id : $('#id').val(),
+               /*id : $('#id').val(),*/
                pw : $('#password').val(),
                passwordCheck : $('#passwordCheck').val(),
                name : $('#name').val(),
@@ -449,7 +467,12 @@ $(document).ready(function() {
    });
    
    //회원가입시 아이디 중복 체크
-   $('#idcheck').on("click", function () {
+   /* 수정날짜 2017.08.03
+    * 
+    * 
+    */
+   
+  /* $('#idcheck').on("click", function () {
       
       var divId = $('#divId');
 
@@ -484,7 +507,7 @@ $(document).ready(function() {
          
       }
       
-   });
+   });*/
    
    //회원가입시 닉네임 중복 체크
    $('#nicknamecheck').on("click", function () {

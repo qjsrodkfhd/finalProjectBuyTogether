@@ -42,7 +42,12 @@ public class JoinRestController {
    }
    
    //아이디 중복 확인
-   @RequestMapping(value = "/idCheck", method=RequestMethod.POST)
+   /*
+    * 수정일 2017.08.04
+    * 
+    */
+   
+   /*@RequestMapping(value = "/idCheck", method=RequestMethod.POST)
    public ResponseEntity<String> requestIdCheck(String id) throws Exception{
 
       ResponseEntity<String> entity = null;
@@ -58,7 +63,7 @@ public class JoinRestController {
       
       return entity;
       
-   }
+   }*/
    
    //닉네임 중복 확인
    @RequestMapping(value = "/nicknameCheck", method=RequestMethod.POST)

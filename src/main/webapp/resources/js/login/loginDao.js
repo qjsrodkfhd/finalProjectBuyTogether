@@ -142,7 +142,8 @@ function loginDao() {
 	
 	//로그인 회원 정보 세션에 저장 및 로그인 상태 유지 회원 정보 로컬 저장소에 저장
 	this.loginSession = function(user, loginCheckStatus) {
-
+		
+		
 		if(loginCheckStatus == "true") { //로그인 상태 유지하기를 체크했다면,
 
 			localStorage.setItem("email", user.email);
@@ -151,7 +152,7 @@ function loginDao() {
 			localStorage.setItem("level", user.level_number);
 			
 		}
-		
+
 		sessionStorage.setItem("email", user.email);
 		sessionStorage.setItem("pw", user.pw);
 		sessionStorage.setItem("number", user.user_number);

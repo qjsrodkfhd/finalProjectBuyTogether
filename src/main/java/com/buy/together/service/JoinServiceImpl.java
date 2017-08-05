@@ -27,7 +27,10 @@ public class JoinServiceImpl implements JoinService{
       joindao.create(user);
       
    }
-   
+  
+   /*
+    * 수정일 2017.08.04
+    * 
    @Override
    public String idCheck(String id) throws Exception { //회원, 관리자 아이디 중복 체크
 
@@ -43,7 +46,7 @@ public class JoinServiceImpl implements JoinService{
       
       return checkId;
       
-   }
+   }*/
    
    @Override
    public String nicknameCheck(String nickname) throws Exception { //회원, 관리자 닉네임 중복 체크
@@ -52,11 +55,11 @@ public class JoinServiceImpl implements JoinService{
       
       checkNickname = joindao.userNicknameCheck(nickname); //회원 닉네임 체크
       
-      if(checkNickname == null) {
+    /*  if(checkNickname == null) {
          
          checkNickname = joindao.adminNicknameCheck(nickname); //관리자 닉네임 체크
          
-      }
+      }*/
       
       return checkNickname;
       
@@ -69,11 +72,11 @@ public class JoinServiceImpl implements JoinService{
       
       checkEmail = joindao.userEmailCheck(email); //회원 이메일 체크
       
-      if(checkEmail == null) {
+     /* if(checkEmail == null) {
          
          checkEmail = joindao.adminEmailCheck(email); //관리자 이메일 체크
          
-      }
+      }*/
       
       return checkEmail;
       

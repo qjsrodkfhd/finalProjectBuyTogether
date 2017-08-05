@@ -8,7 +8,11 @@ public interface JoinDao {
    public void create(User user) throws Exception;
    
    //회원 아이디 중복 체크
-   public String userIdCheck(String id) throws Exception;
+   /*
+    * 수정일 2017.08.04
+    * 
+    */
+   /*public String userIdCheck(String id) throws Exception*/;
    
    //관리자 아이디 중복 체크
    public String adminIdCheck(String id) throws Exception;

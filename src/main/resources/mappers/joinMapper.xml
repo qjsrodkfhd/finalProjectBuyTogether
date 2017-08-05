@@ -5,19 +5,28 @@
 
    <!-- 신규회원 가입 -->
    <insert id="create">
-      insert into user (id, pw, name, nickname, birthdate, gender, email, phone_number)
-      values(#{id}, #{pw}, #{name}, #{nickname}, #{birthdate}, #{gender}, #{email}, #{phone_number})
+      insert into user (email, pw, name, nickname, birthdate, gender, phone_number, level_number)
+      values(#{email}, #{pw}, #{name}, #{nickname}, #{birthdate}, #{gender}, #{phone_number}, 1)
    </insert>
    
    <!-- 유저 아이디 검색 -->
-   <select id="selectUserId"  resultType="String">
-      select id from user where id = #{id}
+   
+   <!-- 
+   		수정일 2017.08.03 
+   -->
+   <!--    
+	<select id="selectUserId"  resultType="String">
+      select email from user where email = #{email}
    </select>
    
+   -->
+   
    <!-- 관리자 아이디 검색 -->
-   <select id="selectAdminId" resultType="String">
+   <!-- 수정일 2017.08.03 -->
+   <!-- 관리자 아직 사용 안함 보류 -->
+  <!--  <select id="selectAdminId" resultType="String">
       select admin_id from admin where admin_id = #{id}
-   </select>
+   </select> -->
    
    <!-- 유저 닉네임 검색 -->
    <select id="selectUserNickname"  resultType="String">

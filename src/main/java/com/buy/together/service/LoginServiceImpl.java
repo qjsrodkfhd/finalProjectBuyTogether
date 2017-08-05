@@ -39,6 +39,7 @@ public class LoginServiceImpl implements LoginService {
 
         String shaPass = sha.getSha256(user.getPw().getBytes());
         user.setPw(shaPass);
+        
 		userLogin = loginDao.buyTogetherUserLogin(user);
 		
 		if(userLogin != null) { //로그인이 성공했다면,

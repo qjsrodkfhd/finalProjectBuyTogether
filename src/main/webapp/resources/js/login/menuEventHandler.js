@@ -15,8 +15,8 @@ $(document).ready(function() {
 			sessionStorage.setItem("returnUrl", window.location.pathname);
 			document.location = "/login";
 			
-		}/*
-		url == "/buyTogether/write" ||*/
+		}
+		
 	} else {
 		
 		showLogoutBtn(); //로그아웃 버튼 표시

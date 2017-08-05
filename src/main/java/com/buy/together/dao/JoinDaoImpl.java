@@ -21,12 +21,16 @@ public class JoinDaoImpl implements JoinDao {
       
    }
    
-   @Override //회원 아이디 중복 체크
+   /* 수정일 2017.08.04
+    * 
+    * 
+    */
+ /* @Override //회원 아이디 중복 체크
    public String userIdCheck(String id) {
 
       return sqlSession.selectOne(namespace + ".selectUserId", id);
       
-   }
+   }*/
    
    @Override //관리자 아이디 중복 체크
    public String adminIdCheck(String id) {

@@ -35,7 +35,14 @@ public class LoginRestController {
 		LoginDTO userInfo = null;
 		
 		try {
+			
+			logger.info(user.getEmail() + " email + pw " + user.getPw());
+			
 			userInfo = loginService.buyTogetherLogin(user);
+			
+			logger.info(userInfo.getEmail() + " email + nickname " + userInfo.getNickname());
+			logger.info(userInfo.getLevel_number() + " 레벨넘버");
+			
 			entity = new ResponseEntity<LoginDTO>(userInfo, HttpStatus.OK); // HttpStatus.OK == 200
 		} catch(Exception e) {
 			e.printStackTrace();

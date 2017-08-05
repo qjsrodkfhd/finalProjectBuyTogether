@@ -41,7 +41,12 @@ function joinDao() {
    };
 
    //회원가입시 아이디 중복체크
-   this.idCheckDao = function(id) {      
+   /*
+    * 수정일 2017.08.04
+    * 
+    */
+  /* this.idCheckDao = function(id) {   
+	   
       //아이디 중복체크
       $.ajax({
          url:'/join/idCheck',      
@@ -50,7 +55,7 @@ function joinDao() {
          data: { "id" : id },
          async : false,
          success: function(data){
-            
+
             if(data == ""){ //닉네임 사용가능
                
                result = "success";
@@ -67,7 +72,7 @@ function joinDao() {
       
       return result;
 
-   };
+   };*/
    
    //회원가입시 닉네임 중복체크
    this.nicknameCheckDao = function(nickname) {
@@ -108,7 +113,7 @@ function joinDao() {
          data: { "email" : email },
          async : false,
          success: function(data){
-            
+
             if(data == ""){ //닉네임 사용가능
                
                result = "success"; 

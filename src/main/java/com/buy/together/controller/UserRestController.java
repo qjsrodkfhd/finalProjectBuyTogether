@@ -151,6 +151,10 @@ public class UserRestController {
 	}
 
 
+	/*
+	 * 수정 계획 : ID찾기 -> Email 찾기
+	 * 
+	 */
 	@RequestMapping(value="findId", method = RequestMethod.POST)
 	public ResponseEntity<String> requestFindId(@RequestBody User user) throws Exception {
 
